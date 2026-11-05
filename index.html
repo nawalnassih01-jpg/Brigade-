@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Brigade – Pilote une équipe de clippeurs payés aux vues</title>
-<meta name="description" content="Un lien par clippeur, les vues relevées, chaque paie calculée au millier. Accès fondateur à 79 € par mois, remboursé si non livré.">
+<meta name="description" content="Un lien par clippeur, les vues relevées, chaque paie calculée au millier. Liste d’attente fondateurs : gratuit, sans engagement.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Brigade – Pilote une équipe de clippeurs payés aux vues">
 <meta property="og:description" content="Un lien par clippeur, les vues relevées, chaque paie calculée au millier.">
@@ -61,6 +61,10 @@ footer a{color:var(--mute)}
 .legal h3{font-size:1.1rem;margin:18px 0 6px}
 .legal p{font-size:.9rem;color:var(--mute)}
 .todo{background:#FFF1B8;padding:0 3px}
+form{margin-top:18px}
+label{display:block;font-weight:700;margin:12px 0 6px}
+input[type=email],select{width:100%;font:inherit;font-size:16px;padding:14px;min-height:52px;border:2px solid var(--ink);background:var(--white);border-radius:0}
+form .btn{width:100%;margin-top:18px;cursor:pointer}
 .bar{position:fixed;left:0;right:0;bottom:0;background:var(--white);border-top:2px solid var(--ink);padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));z-index:5}
 .bar .btn{max-width:600px;margin:0 auto;padding:13px 16px;min-height:50px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -75,7 +79,7 @@ footer a{color:var(--mute)}
 <h1>Pilote une équipe de clippeurs payés aux vues.</h1>
 <p class="sub">Un lien par clippeur, les vues relevées, chaque paie calculée au millier. Sans tableur.</p>
 <a class="btn" href="#offre">Commencer</a>
-<p class="note">Accès fondateur : ouverture sous 14&nbsp;jours, remboursé si non livré.</p>
+<p class="note">Liste d’attente fondateurs : gratuit, aucun paiement aujourd’hui.</p>
 
 <div class="ticket" aria-label="Exemple de calcul de paie">
 <div><span>@lea.clips</span><span>184&nbsp;000 vues</span></div>
@@ -108,18 +112,27 @@ footer a{color:var(--mute)}
 
 <section id="offre">
 <div class="w">
-<h2>Accès fondateur</h2>
+<h2>Réserve ta place fondateur</h2>
 <p class="cmp">À 5&nbsp;minutes par clippeur, 2&nbsp;heures de relevé par semaine, ça fait plus de 8&nbsp;heures par mois que Brigade te rend.</p>
 <div class="offer">
+<p class="note" style="margin:0 0 6px">Prix fondateur prévu</p>
 <div class="price">79&nbsp;€<span> / mois</span></div>
 <p class="day">soit 2,63&nbsp;€ par jour · jusqu’à 25&nbsp;clippeurs</p>
 <ul>
-<li>Accès ouvert sous 14&nbsp;jours, par e-mail</li>
-<li>Prix fondateur conservé tant que tu restes abonné</li>
+<li>Aucun paiement aujourd’hui</li>
+<li>Tu es prévenu par e-mail dès l’ouverture, prévue sous 14&nbsp;jours</li>
+<li>Le prix fondateur est proposé en priorité aux inscrits</li>
 </ul>
-<div class="guar"><strong>Remboursé si non livré.</strong> Si ton accès n’est pas ouvert sous 14&nbsp;jours, écris à <span class="todo">[TON E-MAIL]</span> : remboursement intégral sous 5&nbsp;jours ouvrés. Une fois l’accès ouvert, tu as 14&nbsp;jours pour demander le remboursement par le même e-mail.</div>
-<a class="btn" href="https://buy.stripe.com/test_5kQ5kC8Zhc5aa526JTcwg00">Réserver mon accès à 79&nbsp;€ / mois</a>
-<p class="note">Sans engagement, résiliable à tout moment. Paiement sécurisé par Stripe.</p>
+<div class="guar"><strong>Aucun engagement.</strong> Tu ne paies rien en t’inscrivant, et tu peux te retirer de la liste sur simple e-mail.</div>
+<form id="f" action="https://formspree.io/f/xdeejpdo" method="POST" novalidate>
+<label for="e">Ton e-mail</label>
+<input id="e" name="email" type="email" inputmode="email" autocomplete="email" placeholder="toi@exemple.fr" required>
+<label for="n">Combien de clippeurs veux-tu piloter&nbsp;?</label>
+<select id="n" name="clippeurs"><option>1 à 5</option><option>6 à 15</option><option>16 à 25</option><option>Plus de 25</option></select>
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+<button class="btn" type="submit">Réserver ma place</button>
+<p class="note" id="msg" role="status">Gratuit, sans engagement. Ton e-mail sert uniquement à t’annoncer l’ouverture.</p>
+</form>
 </div>
 </div>
 </section>
@@ -129,8 +142,8 @@ footer a{color:var(--mute)}
 <h2>Questions fréquentes</h2>
 <details><summary>Ça marche pour mon cas&nbsp;?</summary><p>Si tu fais diffuser tes vidéos par plusieurs comptes (TikTok, Reels, Shorts) et que tu paies au millier de vues, oui. Jusqu’à 25 clippeurs.</p></details>
 <details><summary>Combien de temps ça me prend&nbsp;?</summary><p>Tu envoies un lien à chaque clippeur, puis tu consultes ton tableau de bord. Le relevé et le calcul ne passent plus par toi.</p></details>
-<details><summary>Et si je veux arrêter&nbsp;?</summary><p>Tu résilies quand tu veux, sans engagement. Le remboursement est détaillé dans la garantie ci-dessus.</p></details>
-<details><summary>À quoi sert ce que je paie&nbsp;?</summary><p>À l’accès à Brigade : liens de suivi, relevé des vues, calcul des paies, tableau de bord. Le produit ouvre sous 14 jours, tu paies dès maintenant le prix fondateur.</p></details>
+<details><summary>Et si je veux arrêter&nbsp;?</summary><p>Aujourd’hui tu ne paies rien : tu te retires de la liste sur simple e-mail. Au lancement, l’abonnement sera sans engagement, résiliable à tout moment.</p></details>
+<details><summary>À quoi sert ce que je paie&nbsp;?</summary><p>À l’accès à Brigade : liens de suivi, relevé des vues, calcul des paies, tableau de bord. Le produit ouvre sous 14 jours. Rien n’est facturé avant l’ouverture.</p></details>
 </div>
 </section>
 
@@ -142,7 +155,9 @@ footer a{color:var(--mute)}
 <h3>Hébergement</h3>
 <p>Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.</p>
 <h3>Paiement</h3>
-<p>Les paiements sont traités par Stripe. Brigade ne stocke aucune donnée de carte.</p>
+<p>Aucun paiement n’est demandé pour le moment.</p>
+<h3>Données personnelles</h3>
+<p>Ton e-mail et ta réponse sur le nombre de clippeurs servent uniquement à t’annoncer l’ouverture de Brigade. Ils sont transmis à Formspree, notre prestataire de collecte. Pour les consulter ou les supprimer, écris à <span class="todo">[E-MAIL]</span>.</p>
 <h3>Conditions et confidentialité</h3>
 <p>Les conditions générales de vente et la politique de confidentialité complètes seront publiées avant l’ouverture des accès.</p>
 </div>
@@ -154,5 +169,15 @@ footer a{color:var(--mute)}
 </footer>
 
 <div class="bar"><a class="btn" href="#offre">Commencer</a></div>
+<script>
+(function(){var f=document.getElementById('f'),m=document.getElementById('msg');if(!f)return;
+f.addEventListener('submit',function(ev){ev.preventDefault();
+var e=document.getElementById('e');
+if(!e.value||e.validity.typeMismatch){m.textContent='Entre une adresse e-mail valide.';e.focus();return}
+var b=f.querySelector('button');b.disabled=true;b.textContent='Envoi…';
+fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+.then(function(r){if(!r.ok)throw 0;f.innerHTML='<p class="pain">C’est noté. Tu seras prévenu par e-mail dès l’ouverture.</p>'})
+.catch(function(){b.disabled=false;b.textContent='Réserver ma place';m.textContent='L’envoi a échoué. Réessaie dans un instant.'})})})();
+</script>
 </body>
 </html>
