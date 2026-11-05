@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brigade – Pilote une équipe de clippeurs payés aux vues</title>
+<meta name="description" content="Un lien par clippeur, les vues relevées, chaque paie calculée au millier. Accès fondateur à 79 € par mois, remboursé si non livré.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brigade – Pilote une équipe de clippeurs payés aux vues">
+<meta property="og:description" content="Un lien par clippeur, les vues relevées, chaque paie calculée au millier.">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#0E1A2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E1A2B'/%3E%3Crect x='7' y='17' width='4' height='8' fill='%23FFD23F'/%3E%3Crect x='14' y='11' width='4' height='14' fill='%23FFD23F'/%3E%3Crect x='21' y='6' width='4' height='19' fill='%23FFD23F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E1A2B;--paper:#F3F5F7;--white:#fff;--sig:#FFD23F;--blue:#2447F5;--mute:#53607A;--line:#D5DBE4;
+--head:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.55 var(--body);color:var(--ink);background:var(--paper);padding-bottom:84px;-webkit-text-size-adjust:100%}
+.w{max-width:640px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,9.5vw,3.6rem);font-weight:800}
+h2{font-size:clamp(1.6rem,6vw,2.1rem);font-weight:800;margin-bottom:14px}
+p+p{margin-top:12px}
+.hero{background:var(--ink);color:var(--white);padding:28px 0 40px}
+.logo{font:800 1.15rem var(--head);letter-spacing:-.01em;margin-bottom:36px}
+.logo b{color:var(--sig)}
+.hero p.sub{margin-top:16px;font-size:1.1rem;color:#C9D3E3}
+.btn{display:block;text-align:center;background:var(--sig);color:var(--ink);font:800 1.1rem var(--head);padding:17px 20px;min-height:56px;text-decoration:none;border:2px solid var(--ink)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.hero .btn{margin-top:26px;border-color:var(--sig)}
+.note{font-size:.9rem;color:var(--mute);margin-top:10px}
+.hero .note{color:#9FB0CC}
+.ticket{background:var(--white);color:var(--ink);margin-top:30px;padding:16px 18px;font:15px/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace;border-left:6px solid var(--sig)}
+.ticket div{display:flex;justify-content:space-between;gap:12px}
+.ticket .tot{border-top:1px dashed var(--ink);margin-top:8px;padding-top:8px;font-weight:700}
+.ticket small{display:block;color:var(--mute);font-size:.8rem;margin-top:8px}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+.pain{font-family:var(--head);font-size:1.5rem;font-weight:700;line-height:1.2}
+.pain em{font-style:normal;background:var(--sig);padding:0 4px}
+ul.b{list-style:none;padding:0;margin-top:8px}
+ul.b li{padding:16px 0;border-top:1px solid var(--line)}
+ul.b strong{display:block;font:700 1.15rem var(--head)}
+.offer{background:var(--white);border:2px solid var(--ink);padding:22px 20px}
+.price{font:800 3rem var(--head);letter-spacing:-.03em;line-height:1}
+.price span{font-size:1.1rem;font-weight:700}
+.day{color:var(--mute);margin-top:4px}
+.offer ul{padding-left:20px;margin:16px 0}
+.offer li{margin-top:6px}
+.guar{background:var(--sig);padding:14px 16px;margin:18px 0;font-size:.98rem}
+.guar strong{font-family:var(--head)}
+.cmp{margin-bottom:18px;color:var(--mute)}
+details{border-top:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}
+details p{color:var(--mute);padding-bottom:6px}
+footer{padding:28px 0 20px;font-size:.88rem;color:var(--mute)}
+footer a{color:var(--mute)}
+.legal h3{font-size:1.1rem;margin:18px 0 6px}
+.legal p{font-size:.9rem;color:var(--mute)}
+.todo{background:#FFF1B8;padding:0 3px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--white);border-top:2px solid var(--ink);padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));z-index:5}
+.bar .btn{max-width:600px;margin:0 auto;padding:13px 16px;min-height:50px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(min-width:700px){body{font-size:18px}.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="w">
+<div class="logo">Brigade<b>.</b></div>
+<h1>Pilote une équipe de clippeurs payés aux vues.</h1>
+<p class="sub">Un lien par clippeur, les vues relevées, chaque paie calculée au millier. Sans tableur.</p>
+<a class="btn" href="#offre">Commencer</a>
+<p class="note">Accès fondateur : ouverture sous 14&nbsp;jours, remboursé si non livré.</p>
+
+<div class="ticket" aria-label="Exemple de calcul de paie">
+<div><span>@lea.clips</span><span>184&nbsp;000 vues</span></div>
+<div><span>× 0,80&nbsp;€ / 1&nbsp;000</span><span>147,20&nbsp;€</span></div>
+<div class="tot"><span>Plafond mensuel&nbsp;: 200&nbsp;€</span><span>à payer&nbsp;: 147,20&nbsp;€</span></div>
+<small>Exemple de rendu. Chiffres fictifs.</small>
+</div>
+</div>
+</header>
+
+<main>
+<section>
+<div class="w">
+<p class="pain">25&nbsp;clippeurs × 5&nbsp;minutes de relevé et de calcul = <em>plus de 2&nbsp;heures chaque semaine</em>. Personne ne tient ce rythme plus de deux mois, et le levier s’arrête.</p>
+<p class="note">Estimation à 5&nbsp;minutes par clippeur.</p>
+</div>
+</section>
+
+<section>
+<div class="w">
+<h2>Ce que Brigade fait à ta place</h2>
+<ul class="b">
+<li><strong>Un lien de suivi par clippeur</strong>Il le colle dans sa bio. Tu sais combien de clics il t’envoie.</li>
+<li><strong>Les vues relevées</strong>Les vues déclarées et les clics reçus, au même endroit.</li>
+<li><strong>La paie calculée</strong>Au millier de vues, avec un plafond mensuel. Tu paies le bon montant.</li>
+<li><strong>Qui rapporte, qui ne publie plus</strong>Un tableau de bord pour couper ou relancer en un coup d’œil.</li>
+</ul>
+</div>
+</section>
+
+<section id="offre">
+<div class="w">
+<h2>Accès fondateur</h2>
+<p class="cmp">À 5&nbsp;minutes par clippeur, 2&nbsp;heures de relevé par semaine, ça fait plus de 8&nbsp;heures par mois que Brigade te rend.</p>
+<div class="offer">
+<div class="price">79&nbsp;€<span> / mois</span></div>
+<p class="day">soit 2,63&nbsp;€ par jour · jusqu’à 25&nbsp;clippeurs</p>
+<ul>
+<li>Accès ouvert sous 14&nbsp;jours, par e-mail</li>
+<li>Prix fondateur conservé tant que tu restes abonné</li>
+</ul>
+<div class="guar"><strong>Remboursé si non livré.</strong> Si ton accès n’est pas ouvert sous 14&nbsp;jours, écris à <span class="todo">[TON E-MAIL]</span> : remboursement intégral sous 5&nbsp;jours ouvrés. Une fois l’accès ouvert, tu as 14&nbsp;jours pour demander le remboursement par le même e-mail.</div>
+<a class="btn" href="https://buy.stripe.com/test_5kQ5kC8Zhc5aa526JTcwg00">Réserver mon accès à 79&nbsp;€ / mois</a>
+<p class="note">Sans engagement, résiliable à tout moment. Paiement sécurisé par Stripe.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="w">
+<h2>Questions fréquentes</h2>
+<details><summary>Ça marche pour mon cas&nbsp;?</summary><p>Si tu fais diffuser tes vidéos par plusieurs comptes (TikTok, Reels, Shorts) et que tu paies au millier de vues, oui. Jusqu’à 25 clippeurs.</p></details>
+<details><summary>Combien de temps ça me prend&nbsp;?</summary><p>Tu envoies un lien à chaque clippeur, puis tu consultes ton tableau de bord. Le relevé et le calcul ne passent plus par toi.</p></details>
+<details><summary>Et si je veux arrêter&nbsp;?</summary><p>Tu résilies quand tu veux, sans engagement. Le remboursement est détaillé dans la garantie ci-dessus.</p></details>
+<details><summary>À quoi sert ce que je paie&nbsp;?</summary><p>À l’accès à Brigade : liens de suivi, relevé des vues, calcul des paies, tableau de bord. Le produit ouvre sous 14 jours, tu paies dès maintenant le prix fondateur.</p></details>
+</div>
+</section>
+
+<section id="legal" class="legal">
+<div class="w">
+<h2>Mentions légales</h2>
+<h3>Éditeur</h3>
+<p><span class="todo">[NOM OU RAISON SOCIALE]</span>, <span class="todo">[SIRET]</span>, <span class="todo">[ADRESSE]</span>. Contact&nbsp;: <span class="todo">[E-MAIL]</span>.</p>
+<h3>Hébergement</h3>
+<p>Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.</p>
+<h3>Paiement</h3>
+<p>Les paiements sont traités par Stripe. Brigade ne stocke aucune donnée de carte.</p>
+<h3>Conditions et confidentialité</h3>
+<p>Les conditions générales de vente et la politique de confidentialité complètes seront publiées avant l’ouverture des accès.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="w"><a href="#legal">Mentions légales</a> · <a href="#legal">CGV</a> · <a href="#legal">Confidentialité</a></div>
+</footer>
+
+<div class="bar"><a class="btn" href="#offre">Commencer</a></div>
+</body>
+</html>
